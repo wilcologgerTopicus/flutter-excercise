@@ -1,3 +1,3 @@
-# flutter_basicc
+# Dice Roll app
 
-A new Flutter project.
+In this project where making a simple roll dice app

@@ -1,3 +1,3 @@
-# flutter_basic_two
+# Quize app
 
-A new Flutter project.
+In this project where making a simple Quiz app
