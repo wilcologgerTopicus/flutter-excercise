@@ -4,8 +4,8 @@ import 'animations.dart';
 import 'bottom_bar_transition.dart';
 import 'destinations.dart';
 
-class DisappearingBottomNavigationBar extends StatelessWidget {
-  const DisappearingBottomNavigationBar({
+class DisappearingNavigationBar extends StatelessWidget {
+  const DisappearingNavigationBar({
     super.key,
     required this.barAnimation,
     required this.selectedIndex,
@@ -20,11 +20,11 @@ class DisappearingBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomBarTransition(
       animation: barAnimation,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
       child: NavigationBar(
         elevation: 0,
-        backgroundColor: Colors.white,
-        destinations: destinations.map<NavigationDestination>((d) {
+        backgroundColor: Colors.green,
+        destinations: items.map<NavigationDestination>((d) {
           return NavigationDestination(
             icon: Icon(d.icon),
             label: d.label,

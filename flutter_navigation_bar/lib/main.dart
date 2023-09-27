@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'animations.dart';
-import 'disappearing_navigation_rail.dart';
-import 'disappering_bottom_navigation_bar.dart';
+import 'bottom_navigation_bar.dart';
+import 'navigation_rail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,8 +106,26 @@ class _MyHomePageState extends State<MyHomePage>
                 },
               ),
               Expanded(
-                child: Container(
-                  color: Colors.red,
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      final snackBar = SnackBar(
+                        duration: const Duration(hours: 1),
+                        content: const Text('Yay! A SnackBar!'),
+                        action: SnackBarAction(
+                          label: 'Undo',
+                          onPressed: () {
+                            // Some code to undo the change.
+                          },
+                        ),
+                      );
+
+                      // Find the ScaffoldMessenger in the widget tree
+                      // and use it to show a SnackBar.
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
+                    child: const Text('Show SnackBar'),
+                  ),
                 ),
               ),
             ],
